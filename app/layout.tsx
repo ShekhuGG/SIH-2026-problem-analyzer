@@ -1,16 +1,5 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
-
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-});
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-});
 
 const siteUrl = process.env.SITE_URL ?? 'http://localhost:3000';
 const title = 'SIH 2026 Problem Explorer';
@@ -25,13 +14,13 @@ export const metadata: Metadata = {
     description,
     url: siteUrl,
     type: 'website',
-    images: [{ url: new URL('/og.png', siteUrl).toString(), width: 1200, height: 630, alt: title }],
+    images: [{ url: new URL('og.png', siteUrl).toString(), width: 1200, height: 630, alt: title }],
   },
   twitter: {
     card: 'summary_large_image',
     title,
     description,
-    images: [new URL('/og.png', siteUrl).toString()],
+    images: [new URL('og.png', siteUrl).toString()],
   },
 };
 
@@ -42,11 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }
