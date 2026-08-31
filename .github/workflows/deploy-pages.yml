@@ -34,15 +34,11 @@ jobs:
         env:
           SITE_URL: https://shekhugg.github.io/github-problem-analyzer/
       - name: Prepare Pages artifact
-        run: |
-          mkdir pages
-          cp dist/client/index.html dist/client/favicon.svg dist/client/og.png pages/
-          cp -R dist/client/github-problem-analyzer/. pages/
-          touch pages/.nojekyll
+        run: touch dist/client/.nojekyll
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: pages
+          path: dist/client
 
   deploy:
     environment:
