@@ -194,7 +194,7 @@ export default function ProblemAnalyzer() {
         <header className="flex flex-col gap-3 border-b border-border pb-4 sm:flex-row sm:items-end sm:justify-between">
           <div className="shrink-0">
             <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-primary">Smart India Hackathon 2026</p>
-            <h1 className="mt-1 text-[22px] font-semibold tracking-[-0.035em]">Problem explorer</h1>
+            <h1 className="mt-1 text-[22px] font-semibold tracking-[-0.035em]">BroDev Problem Analyzer</h1>
           </div>
           <div className="flex max-w-3xl items-start gap-2 rounded-md border border-border bg-card px-3 py-2 text-xs leading-5 text-muted-foreground">
             <Info className="mt-0.5 size-3.5 shrink-0 text-primary" />
