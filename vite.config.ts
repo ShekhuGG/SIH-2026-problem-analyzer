@@ -45,7 +45,7 @@ export default defineConfig(async () => {
   const { cloudflare } = await import('@cloudflare/vite-plugin');
 
   return {
-    base: process.env.GITHUB_ACTIONS === 'true' ? '/github-problem-analyzer/' : '/',
+    base: process.env.GITHUB_ACTIONS === 'true' ? '/SIH-2026-problem-analyzer/' : '/',
     css: { postcss: { plugins: [tailwindcss()] } },
     server: isCodexSeatbeltSandbox
       ? { watch: { useFsEvents: false, usePolling: true } }
