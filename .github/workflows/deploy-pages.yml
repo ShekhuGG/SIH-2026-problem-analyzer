@@ -32,7 +32,7 @@ jobs:
       - name: Build static site
         run: npm run build
         env:
-          SITE_URL: https://shekhugg.github.io/github-problem-analyzer/
+          SITE_URL: https://shekhugg.github.io/SIH-2026-problem-analyzer/
       - name: Prepare Pages artifact
         run: touch dist/client/.nojekyll
       - name: Upload Pages artifact
